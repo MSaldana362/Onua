@@ -1,9 +1,8 @@
 ﻿<Properties>
-  <MonoDevelop.Ide.Workspace />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\HpScript.js">
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.Default" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\CamPan.js">
     <Files>
-      <File FileName="Assets\Scripts\spawnSaveSetup.js" Line="8" Column="21" />
-      <File FileName="Assets\Scripts\HpScript.js" Line="16" Column="13" />
+      <File FileName="Assets\Scripts\CamPan.js" Line="18" Column="6" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
