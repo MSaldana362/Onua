@@ -1,9 +1,9 @@
 ﻿<Properties>
   <MonoDevelop.Ide.Workspace />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\HpScript.js">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\playerControls.js">
     <Files>
-      <File FileName="Assets\Scripts\spawnSaveSetup.js" Line="8" Column="21" />
-      <File FileName="Assets\Scripts\HpScript.js" Line="16" Column="13" />
+      <File FileName="Assets\Scripts\playerProp.js" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\playerControls.js" Line="66" Column="18" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

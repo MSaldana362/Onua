@@ -1,6 +1,6 @@
 
 var velocity : Vector3 = Vector3.zero;
-var gravity : float = 20.0;
+var gravity : float = 50.0;
 var moveRight = true;
 var running = false;
 var movingTime : float;
@@ -28,11 +28,11 @@ function Update()
 	{
 		if (Input.GetKey("left"))
 			{
-		velocity = Vector3.left;
+		velocity = Vector3 (-40,0,0);
 			}
 		else if (Input.GetKey("right"))
 		{
-		velocity = Vector3.right;
+		velocity = Vector3 (40,0,0);
 		}
 		else
 		velocity = Vector3.zero;
@@ -62,8 +62,8 @@ function Update()
 		
 		if (Input.GetKey("up"))
 		{
-			PlaySound(jumpSound,0);
-			velocity.y = 8;
+			
+			velocity.y = 50;
 			if (moveRight)
 			{
 				aniPlay.aniSprite(16,16,5,13,4,12,false);   //jump face right
