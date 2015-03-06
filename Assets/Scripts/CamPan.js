@@ -1,9 +1,9 @@
 ﻿#pragma strict
 
-var UpLeft : Transform;
-var UpRight : Transform;
-var BotLeft : Transform;
-var BotRight : Transform;
+var MidTop : Transform;
+var MidRight : Transform;
+var MidLeft : Transform;
+var MidBot : Transform;
 var speed : float = 5.0;
  var temp : boolean = true;
 function Start () {
@@ -11,7 +11,7 @@ function Start () {
 }
 
 function Update () {
-	if(temp)
+    if(temp)
 	{
     	var ran = Random.Range(0,4);
     	temp = false;
@@ -19,19 +19,19 @@ function Update () {
 	var step = speed * Time.deltaTime;
 	if(ran == 0)
 	{
-		transform.position = Vector3.MoveTowards(transform.position,UpLeft.position,step);
+		transform.position = Vector3.MoveTowards(transform.position,MidTop.position,step);
 	}
 	if(ran == 1)
 	{
-		transform.position = Vector3.MoveTowards(transform.position,UpRight.position,step);
+		transform.position = Vector3.MoveTowards(transform.position,MidRight.position,step);
 	}
 	if(ran == 2)
 	{
-		transform.position = Vector3.MoveTowards(transform.position,BotLeft.position,step);
+		transform.position = Vector3.MoveTowards(transform.position,MidLeft.position,step);
 	}
 	if(ran == 3)
 	{
-		transform.position = Vector3.MoveTowards(transform.position,BotRight.position,step);
+		transform.position = Vector3.MoveTowards(transform.position,MidBot.position,step);
 	}
 	
 }
