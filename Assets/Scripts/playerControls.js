@@ -63,7 +63,7 @@ function Update()
 		if (Input.GetKey("up"))
 		{
 			
-			velocity.y = 50;
+			velocity.y += 50;
 			if (moveRight)
 			{
 				aniPlay.aniSprite(16,16,5,13,4,12,false);   //jump face right
