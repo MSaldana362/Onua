@@ -1,6 +1,6 @@
 ﻿#pragma strict
 
-var start : Transform;
+//var start : Transform;
 
 var soundRate : float = 0.0;
 var soundDelay : float = 0.0;
@@ -27,11 +27,6 @@ function Update () {
 }
 function OnTriggerEnter(other : Collider)
 {
-	
-	if (other.tag == "killbox")
-	{
-		
-	}
 	if (other.tag == "DamageBlock")
 	{
 		GetComponent(HpScript).Hp-=5;
@@ -39,7 +34,7 @@ function OnTriggerEnter(other : Collider)
 }
 function OnTriggerStay(other : Collider)
 {
-	if(other.tag == "CamKill")
+	if(other.tag == "KillBox")
 	{
 		print("In");
 		GetComponent(HpScript).Hp-=.4;
