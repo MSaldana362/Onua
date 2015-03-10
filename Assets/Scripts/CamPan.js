@@ -1,37 +1,53 @@
 ﻿#pragma strict
 
-var MidTop : Transform;
-var MidRight : Transform;
-var MidLeft : Transform;
-var MidBot : Transform;
+//moveDirec 0 = top
+//moveDirec 1 = bot
+//moveDirec 2 = left
+//moveDirec 3 = right
 var speed : float = 5.0;
- var temp : boolean = true;
+var begin : boolean = true;
+var tempMovePos : Vector3 = Vector3(0,200,-89.4);
+var moveDirec = 0;
 function Start () {
 	
 }
 
 function Update () {
-    if(temp)
-	{
-    	var ran = Random.Range(0,4);
-    	temp = false;
-    }
 	var step = speed * Time.deltaTime;
-	if(ran == 0)
+	var camTemp : Vector3 = Vector3(transform.position.x,transform.position.y,-89.4);
+    if (begin)
+    {
+    	transform.position = Vector3.MoveTowards(camTemp,tempMovePos,step);
+    }
+    if(transform.position.y+80 >= 200 || transform.position.y-80 <= -200 || transform.position.x+100 >= 250 || transform.position.x-100 <= -250)
+    {
+    	moveDirec = drawMoveVal();
+    }
+	if(moveDirec == 0)
 	{
-		transform.position = Vector3.MoveTowards(transform.position,MidTop.position,step);
+		tempMovePos = Vector3(0,200,-89.4);
 	}
-	if(ran == 1)
+	else if(moveDirec == 1)
 	{
-		transform.position = Vector3.MoveTowards(transform.position,MidRight.position,step);
+		tempMovePos = Vector3(0,-200,-89.4);
 	}
-	if(ran == 2)
+	else if(moveDirec == 2)
+	{	
+		tempMovePos = Vector3(-250,0,-89.4);
+	}
+	else if(moveDirec == 3)
 	{
-		transform.position = Vector3.MoveTowards(transform.position,MidLeft.position,step);
+		tempMovePos = Vector3(250,0,-89.4);
 	}
-	if(ran == 3)
-	{
-		transform.position = Vector3.MoveTowards(transform.position,MidBot.position,step);
-	}
-	
+	transform.position = Vector3.MoveTowards(camTemp,tempMovePos,step);
 }
+function drawMoveVal ()
+{
+	var ran = Random.Range(0,4);
+	return ran;
+}
+
+
+
+
+

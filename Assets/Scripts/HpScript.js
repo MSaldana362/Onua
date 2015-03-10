@@ -15,7 +15,7 @@ function Update () {
 	HPBarL = PercentHP*200;
 	if(Hp <= 0)
 	{
-		transform.position = GetComponent(spawnSaveSetup).start.position;
+		//transform.position = GetComponent(spawnSaveSetup).start.position;
 		Hp = MaxHp;
 		GetComponent(spawnSaveSetup).Lives--;
 	}	
