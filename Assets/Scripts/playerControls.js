@@ -7,7 +7,7 @@ var running = false;
 var movingTime : float;
 var jumpSound : AudioClip;
 var jumpheight : float = 80.0;
-
+var airvelocity : float = 0.0;
 var soundRate : float = 0.0;
 var soundDelay : float = 0.0;
 function PlaySound(soundName,soundDelay : float)
@@ -67,7 +67,8 @@ function Update()
 		{
 			
 			velocity.y += jumpheight;
-				aniPlay.aniSprite(16,16,5,13,4,12,!moveRight);   //jump 
+			airvelocity = velocity.x;
+			aniPlay.aniSprite(16,16,5,13,4,12,!moveRight);   //jump 
 		}		
 		else
 		{
@@ -97,12 +98,16 @@ function Update()
 	}
 	else 
 	{
-		if (Input.GetKey("left"))
+	
+	
+	
+		if (Input.GetKey("left") && velocity.x > airvelocity - 20 && velocity.x < airvelocity + 10)
 		{
+		
 			velocity += Vector3 (-2,0,0);
 			aniPlay.aniSprite(16,16,5,13,2,12,!moveRight);   //jump 
 		}
-		else if (Input.GetKey("right"))
+		else if (Input.GetKey("right") && velocity.x > airvelocity - 20 && velocity.x < airvelocity + 20)
 		{
 				velocity += Vector3 (2,0,0);
 				aniPlay.aniSprite(16,16,5,13,2,12,!moveRight);   //jump 
@@ -119,7 +124,6 @@ function Update()
 	if (velocity.x >0)
 	velocity.x  -= deceleration * Time.deltaTime;
 	else if (velocity.x <0)
-	
 	velocity.x  += deceleration * Time.deltaTime;
 	velocity.y -= gravity * Time.deltaTime;
 	
@@ -128,7 +132,7 @@ function Update()
 	
 	if(checkPos.x == transform.position.x)
 	{
-	velocity.x =0;
+	velocity.x =-velocity.x;
 	}
 	if(checkPos.y == transform.position.y)
 	velocity.y = -velocity.y;

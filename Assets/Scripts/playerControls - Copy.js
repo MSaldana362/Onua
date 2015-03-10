@@ -1,11 +1,13 @@
 
 var velocity : Vector3 = Vector3.zero;
-var gravity : float = 20.0;
+var deceleration : float = 40;
+var gravity : float = 80.0;
 var moveRight = true;
 var running = false;
 var movingTime : float;
 var jumpSound : AudioClip;
-
+var jumpheight : float = 80.0;
+var airvelocity : float = 0.0;
 var soundRate : float = 0.0;
 var soundDelay : float = 0.0;
 function PlaySound(soundName,soundDelay : float)
@@ -26,13 +28,14 @@ function Update()
 	
 	if (controller.isGrounded)
 	{
+	
 		if (Input.GetKey("a"))
 			{
-		velocity = Vector3.left;
+		velocity = Vector3 (-40,0,0);
 			}
 		else if (Input.GetKey("d"))
 		{
-		velocity = Vector3.right;
+		velocity = Vector3 (40,0,0);
 		}
 		else
 		velocity = Vector3.zero;
@@ -62,55 +65,77 @@ function Update()
 		
 		if (Input.GetKey("w"))
 		{
-			PlaySound(jumpSound,0);
-			velocity.y = 8;
-			if (moveRight)
-			{
-				aniPlay.aniSprite(16,16,5,13,4,12,false);   //jump face right
-			}
-			else
-			{
-				aniPlay.aniSprite(16,16,5,13,4,12,true);    //jump face left
-			}
+			
+			velocity.y += jumpheight;
+			airvelocity = velocity.x;
+			aniPlay.aniSprite(16,16,5,13,4,12,!moveRight);   //jump 
 		}		
 		else
 		{
 			if (Input.GetKey("d"))
 			{
 				if (running)
-					aniPlay.aniSprite(16,16,0,3,16,12,false);   //run face right		
+					aniPlay.aniSprite(16,16,0,3,16,12,false);   //run 		
 				else
-					aniPlay.aniSprite(16,16,0,1,10,12,false);   //walk face right		
+					aniPlay.aniSprite(16,16,0,1,10,12,false);   //walk 	
 			}
 			else if (Input.GetKey("a"))
 			{
 				if (running)
-					aniPlay.aniSprite(16,16,0,3,16,12,true);   //run face left		
+					aniPlay.aniSprite(16,16,0,3,16,12,true);   //run 
 				else
-					aniPlay.aniSprite(16,16,0,1,10,12,true);   //walk face left		
-					
+					aniPlay.aniSprite(16,16,0,1,10,12,true);   //walk		
 			}
 			else if (Input.GetKey("s"))
 			{
-				if (moveRight)
-					aniPlay.aniSprite(16,16,0,8,16,12,false);   //crouch face right		
-				else
-					aniPlay.aniSprite(16,16,0,9,16,12,false);   //crouch face left	
+					aniPlay.aniSprite(16,16,0,8,16,12,!moveRight);   //crouch 	
 			}		
 			else
-			{
-				if (moveRight)
-					aniPlay.aniSprite(16,16,0,0,16,12,false);   //neutral face right		
-				else
-					aniPlay.aniSprite(16,16,0,0,16,12,true);   //neutral face left	
+			{	
+					aniPlay.aniSprite(16,16,0,0,16,12,!moveRight);   //neutral 	
 			}
 		 }
 	}
-	if (Input.GetKey("p"))
-	Application.LoadLevel("Title Page");
-
+	else 
+	{
+	
+	
+	
+		if (Input.GetKey("a") && velocity.x > airvelocity - 20 && velocity.x < airvelocity + 10)
+		{
+		
+			velocity += Vector3 (-2,0,0);
+			aniPlay.aniSprite(16,16,5,13,2,12,!moveRight);   //jump 
+		}
+		else if (Input.GetKey("d") && velocity.x > airvelocity - 20 && velocity.x < airvelocity + 20)
+		{
+				velocity += Vector3 (2,0,0);
+				aniPlay.aniSprite(16,16,5,13,2,12,!moveRight);   //jump 
+		}
+		if (velocity.x > 0)
+		{
+			moveRight = true;
+		}
+		else if (velocity.x < 0)
+		{
+			moveRight = false;
+		}
+	}
+	if (velocity.x >0)
+	velocity.x  -= deceleration * Time.deltaTime;
+	else if (velocity.x <0)
+	velocity.x  += deceleration * Time.deltaTime;
 	velocity.y -= gravity * Time.deltaTime;
+	
+	var checkPos : Vector3 = transform.position;
 	controller.Move(velocity * Time.deltaTime);
+	
+	if(checkPos.x == transform.position.x)
+	{
+	velocity.x =-velocity.x;
+	}
+	if(checkPos.y == transform.position.y)
+	velocity.y = -velocity.y;
 }
 
 
