@@ -1,17 +1,10 @@
 ﻿<Properties>
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.Default" />
-<<<<<<< HEAD
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\playerControls - Copy.js">
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\playerControls.js">
     <Files>
-      <File FileName="Assets\Scripts\playerControls.js" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\playerControls - Copy.js" Line="110" Column="27" />
-      <File FileName="Assets\Scripts\playerProp.js" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\playerProp - Copy.js" Line="56" Column="1" />
-=======
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\CamPan.js">
-    <Files>
-      <File FileName="Assets\Scripts\CamPan.js" Line="49" Column="1" />
->>>>>>> origin/master
+      <File FileName="Assets\Scripts\playerControls - Copy.js" Line="127" Column="24" />
+      <File FileName="Assets\Scripts\playerControls.js" Line="128" Column="4" />
+      <File FileName="Assets\Scripts\aniSprite.js" Line="33" Column="6" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

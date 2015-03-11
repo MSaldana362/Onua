@@ -22,6 +22,7 @@ function PlaySound(soundName,soundDelay : float)
 
 function Update()
 {
+ 	transform.position.z=0;
 	var aniPlay = GetComponent("aniSprite");
 	var controller : CharacterController = 
 	GetComponent(CharacterController);
@@ -121,6 +122,18 @@ function Update()
 			moveRight = false;
 		}
 	}
+	
+	//push
+			 if (Input.GetKey("s"))
+			{
+			
+			aniPlay.aniSprite(16,16,5,7,7,12,!moveRight);   //push 	
+			}	
+		
+	
+	
+	
+	
 	if (velocity.x >0)
 	velocity.x  -= deceleration * Time.deltaTime;
 	else if (velocity.x <0)
