@@ -49,12 +49,14 @@
      <Compile Include="Assets\Scripts\CamPan.js" />
      <Compile Include="Assets\Scripts\HpScript.js" />
      <Compile Include="Assets\Scripts\aniSprite.js" />
+     <Compile Include="Assets\Scripts\horizScript.js" />
      <Compile Include="Assets\Scripts\playerControls - Copy.js" />
      <Compile Include="Assets\Scripts\playerControls.js" />
      <Compile Include="Assets\Scripts\playerProp - Copy.js" />
      <Compile Include="Assets\Scripts\playerProp.js" />
      <Compile Include="Assets\Scripts\spawnSaveSetup.js" />
      <Compile Include="Assets\Scripts\spawnSaveSetup1.js" />
+     <Compile Include="Assets\Scripts\verticleScript.js" />
  <Reference Include="UnityEngine.UI">
  <HintPath>C:/Program Files (x86)/Unity/Editor/Data/UnityExtensions/Unity/GUISystem/4.6.1/UnityEngine.UI.dll</HintPath>
  </Reference>
