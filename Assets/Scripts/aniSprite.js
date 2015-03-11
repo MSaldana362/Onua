@@ -26,7 +26,12 @@ framesPerSecond,flip)// function for animating sprites
 	var u = index % columnSize;																		// u gets current x coordinate from column size
 	var v = index / columnSize;																		// v gets current y coordinate by dividing by column size
 	
-	var offset = Vector2 ((u + colFrameStart) * size.x,(1.0 - size.y) - (v + rowFrameStart) * size.y); // offset equals column and row
+	var offset : Vector2;
+	
+	if (flip)
+	offset = Vector2 ((u + colFrameStart) * -size.x,(1.0 - size.y) - (v + rowFrameStart) * size.y); // offset equals column and row
+	else
+	offset = Vector2 ((u + colFrameStart) * size.x,(1.0 - size.y) - (v + rowFrameStart) * size.y); // offset equals column and row
 	
 	renderer.material.mainTextureOffset = offset;	
 													// texture offset for diffuse map

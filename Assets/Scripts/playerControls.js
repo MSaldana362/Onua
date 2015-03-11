@@ -22,6 +22,7 @@ function PlaySound(soundName,soundDelay : float)
 
 function Update()
 {
+	 transform.position.z=0;
 	var aniPlay = GetComponent("aniSprite");
 	var controller : CharacterController = 
 	GetComponent(CharacterController);
@@ -86,10 +87,7 @@ function Update()
 				else
 					aniPlay.aniSprite(16,16,0,1,10,12,true);   //walk		
 			}
-			else if (Input.GetKey("down"))
-			{
-					aniPlay.aniSprite(16,16,0,8,16,12,!moveRight);   //crouch 	
-			}		
+			
 			else
 			{	
 					aniPlay.aniSprite(16,16,0,0,16,12,!moveRight);   //neutral 	
@@ -121,6 +119,16 @@ function Update()
 			moveRight = false;
 		}
 	}
+	
+	//push
+			 if (Input.GetKey("down"))
+			{
+			
+			aniPlay.aniSprite(16,16,5,7,7,12,!moveRight);   //push 	
+			
+			}	
+		
+	
 	if (velocity.x >0)
 	velocity.x  -= deceleration * Time.deltaTime;
 	else if (velocity.x <0)
