@@ -48,6 +48,7 @@
   <ItemGroup>
      <Compile Include="Assets\Scripts\CamPan.js" />
      <Compile Include="Assets\Scripts\HpScript.js" />
+     <Compile Include="Assets\Scripts\PlayerDamage+Spawn.js" />
      <Compile Include="Assets\Scripts\aniSprite.js" />
      <Compile Include="Assets\Scripts\playerControls - Copy.js" />
      <Compile Include="Assets\Scripts\playerControls.js" />
