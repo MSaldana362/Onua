@@ -1,25 +1,10 @@
 ﻿<Properties>
-<<<<<<< HEAD
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.Default" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\rotatePlats.js">
-    <Files>
-      <File FileName="Assets\Scripts\verticleScript.js" Line="2" Column="21" />
-      <File FileName="Assets\Scripts\horizScript.js" Line="2" Column="21" />
-      <File FileName="Assets\Scripts\rotatePlats.js" Line="9" Column="22" />
-=======
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-<<<<<<< HEAD
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\playerControls.js">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\doorVertScript.js">
     <Files>
-      <File FileName="Assets\Scripts\playerControls - Copy.js" Line="127" Column="24" />
-      <File FileName="Assets\Scripts\playerControls.js" Line="128" Column="4" />
-      <File FileName="Assets\Scripts\aniSprite.js" Line="33" Column="6" />
-=======
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\CamPan.js">
-    <Files>
-      <File FileName="Assets\Scripts\CamPan.js" Line="40" Column="26" />
->>>>>>> origin/master
->>>>>>> origin/master
+      <File FileName="Assets\Scripts\horizScript.js" Line="31" Column="3" />
+      <File FileName="Assets\Scripts\verticleScript.js" Line="8" Column="1" />
+      <File FileName="Assets\Scripts\doorVertScript.js" Line="27" Column="13" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

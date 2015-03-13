@@ -1,7 +1,5 @@
 ﻿
-var ydir : float = 1.0;
-var velocity : Vector3=Vector3.zero;
-
+var ydir : float;
 
 function Update()
 {
@@ -12,7 +10,7 @@ function Update()
 	var controller : CharacterController = GetComponent(CharacterController);
 	controller.Move(velocity*Time.deltaTime);
 	*/
-	transform.Translate(0,0,ydir);
+	transform.Translate(ydir,0,0);
 	
 }
 
@@ -21,12 +19,12 @@ function OnTriggerEnter(other : Collider)
 {
 	if (other.tag == "verticleCollider")
 	{
-		ydir = -1;
+		ydir = 0.1;
 		print("got here");
 	}
 	else if (other.tag == "verticleCollider2")
 	{
-		ydir = 1;
+		ydir = -0.1;
 		print("got here");
 	}
 	

@@ -7,19 +7,31 @@ function Update()
 {
 
 	//transform.position.y+=ydir;
+	/*
 	velocity = Vector3(xdir, 0, 0);
 	var controller : CharacterController = GetComponent(CharacterController);
 	controller.Move(velocity*Time.deltaTime);
+	*/
 	
+	transform.Translate(xdir, 0,0);
 }
 
 
 function OnTriggerEnter(other : Collider)
 {
-	if (other.tag == "verticleCollider")
+
+	print("entered on trig");
+	if (other.tag == "horizColl")
 	{
-		xdir = -xdir;
-		print("got here");
+		xdir = 1;
+		print("xdir changed");
+		print(xdir);
+	}
+	else if (other.tag == "horizColl2")
+	{
+		xdir = -1;
+		print("xdir changed");
+		print(xdir);
 	}
 	
 }
