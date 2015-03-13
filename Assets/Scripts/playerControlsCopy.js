@@ -10,6 +10,7 @@ var jumpheight : float = 80.0;
 var airvelocity : float = 0.0;
 var soundRate : float = 0.0;
 var soundDelay : float = 0.0;
+var ispushed : boolean = false;
 function PlaySound(soundName,soundDelay : float)
 {
 	if (!audio.isPlaying && Time.time > soundRate)
@@ -30,17 +31,23 @@ function Update()
 	if (controller.isGrounded)
 	{
 	
-		if (Input.GetKey("a"))
-			{
-		velocity = Vector3 (-40,0,0);
-			}
-		else if (Input.GetKey("d"))
+		if (Input.GetKey("a") && !Input.GetKey("d"))
 		{
-		velocity = Vector3 (40,0,0);
+			velocity = Vector3 (-40,0,0);
+		}
+		else if (Input.GetKey("d")&& !Input.GetKey("a"))
+		{
+			velocity = Vector3 (40,0,0);
+		}
+		else if(ispushed)
+		{
+			velocity = Vector3 (70,70,0);
+			ispushed = false;
 		}
 		else
-		velocity = Vector3.zero;
-		
+		{
+			velocity = Vector3.zero;
+		}
 		if (velocity.x > 0)
 		{
 			moveRight = true;
@@ -73,24 +80,20 @@ function Update()
 		}		
 		else
 		{
-			if (Input.GetKey("d"))
+			if (Input.GetKey("d") && !Input.GetKey("a"))
 			{
 				if (running)
 					aniPlay.aniSprite(16,16,0,3,16,12,false);   //run 		
 				else
 					aniPlay.aniSprite(16,16,0,1,10,12,false);   //walk 	
 			}
-			else if (Input.GetKey("a"))
+			else if (Input.GetKey("a")&& !Input.GetKey("d"))
 			{
 				if (running)
 					aniPlay.aniSprite(16,16,0,3,16,12,true);   //run 
 				else
 					aniPlay.aniSprite(16,16,0,1,10,12,true);   //walk		
 			}
-			else if (Input.GetKey("s"))
-			{
-					aniPlay.aniSprite(16,16,0,8,16,12,!moveRight);   //crouch 	
-			}		
 			else
 			{	
 					aniPlay.aniSprite(16,16,0,0,16,12,!moveRight);   //neutral 	
@@ -99,9 +102,6 @@ function Update()
 	}
 	else 
 	{
-	
-	
-	
 		if (Input.GetKey("a") && velocity.x > airvelocity - 20 && velocity.x < airvelocity + 10)
 		{
 		
@@ -124,7 +124,7 @@ function Update()
 	}
 	
 	//push
-			 if (Input.GetKey("s"))
+			 if (Input.GetKey("s")&& !Input.GetKey("d")&& !Input.GetKey("a"))
 			{
 			
 			aniPlay.aniSprite(16,16,5,7,7,12,!moveRight);   //push 	
@@ -134,9 +134,9 @@ function Update()
 	
 	
 	
-	if (velocity.x >0)
+	if (velocity.x >1)
 	velocity.x  -= deceleration * Time.deltaTime;
-	else if (velocity.x <0)
+	else if (velocity.x <-1)
 	velocity.x  += deceleration * Time.deltaTime;
 	velocity.y -= gravity * Time.deltaTime;
 	
