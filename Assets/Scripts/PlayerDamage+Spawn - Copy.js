@@ -7,8 +7,8 @@ var PercentHP : float;
 var gameOver : boolean = false;
 var Lives : int = 3;
 var hpLocateX : int;
-var spawn : Transform;
 
+var spawn : Transform;
 function Start () {
 
 }
@@ -61,4 +61,4 @@ function OnGUI()
 	{
 		GUI.Box(Rect(1000,1000,100,20),"Game Over");
 	}	
-} 
+}
