@@ -10,6 +10,7 @@ var jumpheight : float = 80.0;
 var airvelocity : float = 0.0;
 var soundRate : float = 0.0;
 var soundDelay : float = 0.0;
+var ispushed : boolean = false;
 function PlaySound(soundName,soundDelay : float)
 {
 	if (!audio.isPlaying && Time.time > soundRate)
@@ -30,16 +31,23 @@ function Update()
 	if (controller.isGrounded)
 	{
 	
-		if (Input.GetKey("left"))
+		if (Input.GetKey("left")&& !Input.GetKey("right"))
 			{
 		velocity = Vector3 (-40,0,0);
 			}
-		else if (Input.GetKey("right"))
+		else if (Input.GetKey("right")&& !Input.GetKey("left"))
 		{
 		velocity = Vector3 (40,0,0);
 		}
+		else if(ispushed)
+		{
+			velocity = Vector3 (70,70,0);
+			ispushed = false;
+		}
 		else
-		velocity = Vector3.zero;
+		{
+			velocity = Vector3.zero;
+		}
 		
 		if (velocity.x > 0)
 		{
@@ -73,14 +81,14 @@ function Update()
 		}		
 		else
 		{
-			if (Input.GetKey("right"))
+			if (Input.GetKey("right") && !Input.GetKey("left"))
 			{
 				if (running)
 					aniPlay.aniSprite(16,16,0,3,16,12,false);   //run 		
 				else
 					aniPlay.aniSprite(16,16,0,1,10,12,false);   //walk 	
 			}
-			else if (Input.GetKey("left"))
+			else if (Input.GetKey("left")&& !Input.GetKey("right"))
 			{
 				if (running)
 					aniPlay.aniSprite(16,16,0,3,16,12,true);   //run 
@@ -121,17 +129,16 @@ function Update()
 	}
 	
 	//push
-			 if (Input.GetKey("down"))
+			 if (Input.GetKey("down") && !Input.GetKey("right") && !Input.GetKey("left"))
 			{
-			
 			aniPlay.aniSprite(16,16,5,7,7,12,!moveRight);   //push 	
 			
 			}	
 		
 	
-	if (velocity.x >0)
+	if (velocity.x >1)
 	velocity.x  -= deceleration * Time.deltaTime;
-	else if (velocity.x <0)
+	else if (velocity.x <-1)
 	velocity.x  += deceleration * Time.deltaTime;
 	velocity.y -= gravity * Time.deltaTime;
 	
@@ -144,6 +151,7 @@ function Update()
 	}
 	if(checkPos.y == transform.position.y)
 	velocity.y = -velocity.y;
+	
 }
 
 
