@@ -17,15 +17,26 @@ function Update()
 
 function OnTriggerEnter(other : Collider)
 {
+<<<<<<< HEAD
 	if (other.tag == "horizColl")
 	{
 		xdir = 1;
 
+=======
+
+
+	if (other.tag == "horizColl")
+	{
+		xdir = 1;
+>>>>>>> origin/master
 	}
 	else if (other.tag == "horizColl2")
 	{
 		xdir = -1;
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/master
 	}
 	
 }
