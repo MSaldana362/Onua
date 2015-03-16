@@ -2,7 +2,9 @@
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.Default" />
   <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\horizScript.js">
     <Files>
-      <File FileName="Assets\Scripts\horizScript.js" Line="16" Column="21" />
+      <File FileName="Assets\Scripts\doorVertScript.js" Line="12" Column="4" />
+      <File FileName="Assets\Scripts\horizScript.js" Line="19" Column="2" />
+      <File FileName="Assets\Scripts\doorHorizScript.js" Line="28" Column="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
