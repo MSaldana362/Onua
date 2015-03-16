@@ -59,6 +59,17 @@ function OnGUI()
 	GUI.Label(Rect(hpLocateX,25,100,20),"Lives : " + Lives);
 	if(gameOver)
 	{
-		GUI.Box(Rect(1000,1000,100,20),"Game Over");
+		GUI.BeginGroup(Rect(Screen.width/2-50,Screen.height/2-50,400,200));
+		GUI.Box(Rect(0,0,200,100),"Game Over");
+		GUI.Label(Rect(10,20,200,21),"Would you like to play again?");
+		if (GUI.Button(Rect(0,70,80,30),"Play Again"))
+		{
+			Application.LoadLevel("NolanScene");
+		}
+		if (GUI.Button(Rect(120,70,80,30),"Quit Game"))
+		{
+			Application.Quit();
+		}	
+		GUI.EndGroup();
 	}	
 }
