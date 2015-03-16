@@ -14,6 +14,7 @@ Global
 		HideSolutionNode = FALSE
 	EndGlobalSection
 <<<<<<< HEAD
+<<<<<<< HEAD
 																																									GlobalSection(MonoDevelopProperties) = preSolution
 =======
 <<<<<<< HEAD
@@ -22,6 +23,9 @@ Global
 																																	GlobalSection(MonoDevelopProperties) = preSolution
 >>>>>>> origin/master
 >>>>>>> origin/master
+=======
+																															GlobalSection(MonoDevelopProperties) = preSolution
+>>>>>>> parent of 2cb3f7d... put together v3
 =======
 <<<<<<< HEAD
 																													GlobalSection(MonoDevelopProperties) = preSolution
