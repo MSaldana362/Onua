@@ -15,7 +15,7 @@ function PlaySound(soundName,soundDelay : float)
 	if (!audio.isPlaying && Time.time > soundRate)
 	{
 		soundRate = Time.time + soundDelay;
-
+		audio.clip = soundName;
 		audio.Play();
 	}
 }

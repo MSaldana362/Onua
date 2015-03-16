@@ -1,0 +1,29 @@
+Initialize engine version: 4.6.1f1 (d1db7a1b5196)
+GfxDevice: creating device client; threaded=1
+Direct3D:
+    Version:  Direct3D 11.0 [level 11.0]
+    Renderer: AMD Radeon HD 7470 (ID=0x6778)
+    Vendor:   ATI
+    VRAM:     1010 MB
+Begin MonoManager ReloadAssembly
+Platform assembly: C:\Users\148002640\Desktop\GitHub\Onua\exeTest2_Data\Managed\UnityEngine.dll (this message is harmless)
+Loading C:\Users\148002640\Desktop\GitHub\Onua\exeTest2_Data\Managed\UnityEngine.dll into Unity Child Domain
+Platform assembly: C:\Users\148002640\Desktop\GitHub\Onua\exeTest2_Data\Managed\Assembly-UnityScript.dll (this message is harmless)
+Loading C:\Users\148002640\Desktop\GitHub\Onua\exeTest2_Data\Managed\Assembly-UnityScript.dll into Unity Child Domain
+Platform assembly: C:\Users\148002640\Desktop\GitHub\Onua\exeTest2_Data\Managed\UnityEngine.UI.dll (this message is harmless)
+Loading C:\Users\148002640\Desktop\GitHub\Onua\exeTest2_Data\Managed\UnityEngine.UI.dll into Unity Child Domain
+- Completed reload, in  0.038 seconds
+desktop: 1920x1080 60Hz; virtual: 1920x1080 at 0,0
+<RI> Initializing input.
+<RI> Input initialized.
+Platform assembly: C:\Users\148002640\Desktop\GitHub\Onua\exeTest2_Data\Managed\System.Core.dll (this message is harmless)
+got here
+ 
+(Filename: C:/BuildAgent/work/d63dfc6385190b60/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
+
+Platform assembly: C:\Users\148002640\Desktop\GitHub\Onua\exeTest2_Data\Managed\UnityScript.Lang.dll (this message is harmless)
+Platform assembly: C:\Users\148002640\Desktop\GitHub\Onua\exeTest2_Data\Managed\Boo.Lang.dll (this message is harmless)
+got here
+ 
+(Filename: C:/BuildAgent/work/d63dfc6385190b60/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
+

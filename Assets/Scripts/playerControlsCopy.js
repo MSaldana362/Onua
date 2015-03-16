@@ -11,7 +11,6 @@ var airvelocity : float = 0.0;
 var soundRate : float = 0.0;
 var soundDelay : float = 0.0;
 var ispushed : boolean = false;
-var ispushed2 : boolean = false;
 function PlaySound(soundName,soundDelay : float)
 {
 	if (!audio.isPlaying && Time.time > soundRate)
@@ -44,11 +43,6 @@ function Update()
 		{
 			velocity = Vector3 (70,70,0);
 			ispushed = false;
-		}
-		else if(ispushed2)
-		{
-			velocity = Vector3 (-70,70,0);
-			ispushed2 = false;
 		}
 		else
 		{
@@ -128,8 +122,7 @@ function Update()
 			moveRight = false;
 		}
 	}
-	ispushed = false;
-	ispushed2 = false;
+	
 	//push
 			 if (Input.GetKey("s")&& !Input.GetKey("d")&& !Input.GetKey("a"))
 			{
@@ -157,39 +150,5 @@ function Update()
 	if(checkPos.y == transform.position.y)
 	velocity.y = -velocity.y;
 }
-function OnTriggerEnter(other : Collider)
-{
-	if (other.tag == "horizTopstay")
-	{
-	this.transform.SetParent(other.transform,true);
-	}
-	if(other.tag == "horizBotbounce")
-	{
-	velocity.y *=-1;
-	}
-	if (other.tag == "verttopstay")
-	{
-	this.transform.SetParent(other.transform,true);
-	}
-	if(other.tag == "vertbotbounce")
-	{
-	velocity.y *=-1;
-	}
-	
-}
-function OnTriggerExit(other : Collider)
-{
-	if (other.tag == "horizTopstay")
-	{
-	other.transform.DetachChildren();
-	
-	}
-	if (other.tag == "verttopstay")
-	{
-	other.transform.DetachChildren();
-	
-	}
-}
-
 
 
