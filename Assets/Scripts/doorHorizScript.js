@@ -1,42 +1,31 @@
 ﻿
-var xdir : float = 1.0;
+var xdir : float;
 
 function Update()
 {
 
 	//transform.position.y+=ydir;
 	/*
-	velocity = Vector3(xdir, 0, 0);
+	velocity = Vector3(0, ydir, 0);
 	var controller : CharacterController = GetComponent(CharacterController);
 	controller.Move(velocity*Time.deltaTime);
 	*/
+	transform.Translate(0,0,xdir);
 	
-	transform.Translate(xdir, 0,0);
 }
 
 
 function OnTriggerEnter(other : Collider)
 {
-<<<<<<< HEAD
 	if (other.tag == "horizColl")
 	{
-		xdir = 1;
+		xdir = -0.1;
 
-=======
-
-
-	if (other.tag == "horizColl")
-	{
-		xdir = 1;
->>>>>>> origin/master
 	}
 	else if (other.tag == "horizColl2")
 	{
-		xdir = -1;
-<<<<<<< HEAD
+		xdir = 0.1;
 
-=======
->>>>>>> origin/master
 	}
 	
 }
