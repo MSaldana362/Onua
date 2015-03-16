@@ -20,18 +20,14 @@ function Update()
 function OnTriggerEnter(other : Collider)
 {
 
-	print("entered on trig");
+
 	if (other.tag == "horizColl")
 	{
 		xdir = 1;
-		print("xdir changed");
-		print(xdir);
 	}
 	else if (other.tag == "horizColl2")
 	{
 		xdir = -1;
-		print("xdir changed");
-		print(xdir);
 	}
 	
 }

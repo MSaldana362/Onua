@@ -20,12 +20,11 @@ function OnTriggerEnter(other : Collider)
 	if (other.tag == "verticleCollider")
 	{
 		ydir = 0.1;
-		print("got here");
 	}
 	else if (other.tag == "verticleCollider2")
 	{
 		ydir = -0.1;
-		print("got here");
+
 	}
 	
 }
