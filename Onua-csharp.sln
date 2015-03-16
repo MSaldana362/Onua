@@ -13,24 +13,28 @@ Global
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
-<<<<<<< HEAD
-																																		GlobalSection(MonoDevelopProperties) = preSolution
+																																				GlobalSection(MonoDevelopProperties) = preSolution
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
-																																									GlobalSection(MonoDevelopProperties) = preSolution
+=======
+>>>>>>> parent of a66ee47... unity is dumb
+																																								GlobalSection(MonoDevelopProperties) = preSolution
 =======
 <<<<<<< HEAD
-																																		GlobalSection(MonoDevelopProperties) = preSolution
-=======
 																																	GlobalSection(MonoDevelopProperties) = preSolution
+=======
+																																GlobalSection(MonoDevelopProperties) = preSolution
 >>>>>>> origin/master
 >>>>>>> origin/master
 =======
-																															GlobalSection(MonoDevelopProperties) = preSolution
+<<<<<<< HEAD
+																														GlobalSection(MonoDevelopProperties) = preSolution
 >>>>>>> parent of 2cb3f7d... put together v3
 >>>>>>> origin/master
 =======
+=======
+>>>>>>> parent of a66ee47... unity is dumb
 <<<<<<< HEAD
 																													GlobalSection(MonoDevelopProperties) = preSolution
 =======
