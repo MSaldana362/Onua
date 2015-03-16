@@ -64,7 +64,7 @@ function OnGUI()
 		GUI.Label(Rect(10,20,200,21),"Would you like to play again?");
 		if (GUI.Button(Rect(0,70,80,30),"Play Again"))
 		{
-			Application.LoadLevel("NolanScene");
+			Application.LoadLevel("Together v4ever do not touch only copy");
 		}
 		if (GUI.Button(Rect(120,70,80,30),"Quit Game"))
 		{
