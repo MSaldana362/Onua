@@ -30,7 +30,7 @@ function OnGUI ()
 		GUI.Box(Rect(0,0,100,185),"Main menu");
 		if (GUI.Button(Rect(10,30,80,30),"Start Game"))
 		{
-			Application.LoadLevel("NolanScene");
+			Application.LoadLevel("Together v4ever do not touch only copy");
 		}
 		if (GUI.Button(Rect(10,70,80,30),"Rules"))
 		{
