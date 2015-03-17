@@ -84,7 +84,8 @@ function Update()
 			
 			velocity.y += jumpheight;
 			airvelocity = velocity.x;
-			aniPlay.aniSprite(16,16,5,13,4,12,!moveRight);   //jump 
+			//aniPlay.aniSprite(16,16,5,13,4,12,!moveRight);   //jump 
+			aniPlay.aniSprite(16,16,5,7,7,12,!moveRight); 
 		}		
 		else
 		{
@@ -138,7 +139,8 @@ function Update()
 	//push
 			 if (Input.GetKey("down") && !Input.GetKey("right") && !Input.GetKey("left"))
 			{
-			aniPlay.aniSprite(16,16,5,7,7,12,!moveRight);   //push 	
+			//aniPlay.aniSprite(16,16,5,7,7,12,!moveRight);   //push 
+			aniPlay.aniSprite(16,16,5,13,4,12,!moveRight);	
 			
 			}	
 		
