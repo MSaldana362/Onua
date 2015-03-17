@@ -82,7 +82,7 @@ function Update()
 			
 			velocity.y += jumpheight;
 			airvelocity = velocity.x;
-			aniPlay.aniSprite(16,16,5,7,7,12,!moveRight);   //jump 
+		
 		}		
 		else
 		{
@@ -105,6 +105,12 @@ function Update()
 					aniPlay.aniSprite(16,16,0,0,16,12,!moveRight);   //neutral 	
 			}
 		 }
+	if (Input.GetKey("s")&& !Input.GetKey("d")&& !Input.GetKey("a"))
+			{
+			
+			//aniPlay.aniSprite(16,16,5,7,7,12,!moveRight);   //push 	
+			aniPlay.aniSprite(16,16,5,13,4,12,!moveRight);	
+			}		 
 	}
 	else 
 	{
@@ -112,13 +118,14 @@ function Update()
 		{
 		
 			velocity += Vector3 (-2,0,0);
-			aniPlay.aniSprite(16,16,5,13,2,12,!moveRight);   //jump 
+			aniPlay.aniSprite(16,16,5,7,2,12,!moveRight);    //jump 
 		}
 		else if (Input.GetKey("d") && velocity.x > airvelocity - 20 && velocity.x < airvelocity + 20)
 		{
 				velocity += Vector3 (2,0,0);
-				aniPlay.aniSprite(16,16,5,13,2,12,!moveRight);   //jump 
+				aniPlay.aniSprite(16,16,5,7,1,12,!moveRight);    //jump 
 		}
+		//aniPlay.aniSprite(16,16,5,7,2,12,!moveRight);
 		if (velocity.x > 0)
 		{
 			moveRight = true;
@@ -127,17 +134,12 @@ function Update()
 		{
 			moveRight = false;
 		}
+		//aniPlay.aniSprite(16,16,5,7,2,12,!moveRight);
 	}
 	ispushed = false;
 	ispushed2 = false;
 	//push
-			 if (Input.GetKey("s")&& !Input.GetKey("d")&& !Input.GetKey("a"))
-			{
 			
-			//aniPlay.aniSprite(16,16,5,7,7,12,!moveRight);   //push 	
-			aniPlay.aniSprite(16,16,5,13,4,12,!moveRight);	
-			}	
-		
 	
 	
 	
