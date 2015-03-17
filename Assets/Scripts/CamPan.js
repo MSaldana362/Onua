@@ -8,6 +8,7 @@ var speed : float = 20.0;
 var begin : boolean = true;
 var tempMovePos : Vector3 = Vector3(0,200,-89.4);
 var moveDirec = 0;
+var canMove : boolean = true;
 function Start () {
 	
 }
@@ -43,7 +44,8 @@ function Update () {
 	{
 		tempMovePos = Vector3(250,0,-89.4);
 	}
-	transform.position = Vector3.MoveTowards(camTemp,tempMovePos,step);
+	if(canMove)
+		transform.position = Vector3.MoveTowards(camTemp,tempMovePos,step);
 }
 function drawMoveVal ()
 {

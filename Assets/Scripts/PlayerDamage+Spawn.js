@@ -5,7 +5,7 @@ var MaxHp : float = 100;
 var HPBarL : float;
 var PercentHP : float;
 var gameOver : boolean = false;
-var Lives : int = 3;
+var Lives : int = 5;
 var hpLocateX : int;
 var spawn : Transform;
 
@@ -24,7 +24,11 @@ function Update () {
 		transform.position = spawn.position;
 	}
 	if(Lives == 0)
+	{
 		gameOver = true;
+		GetComponent(playerControls).canMove = false;
+		GameObject.FindGameObjectWithTag("MainCamera").GetComponent(CamPan).canMove = false;
+	}
 }
 
 function OnTriggerEnter(other : Collider)
@@ -61,7 +65,7 @@ function OnGUI()
 	{
 		GUI.BeginGroup(Rect(Screen.width/2-50,Screen.height/2-50,400,200));
 		GUI.Box(Rect(0,0,240,100),"Game Over");
-		GUI.Label(Rect(10,20,200,21),"Would you like to play again?");
+		GUI.Label(Rect(10,20,200,21),"Player 2 wins");
 		if (GUI.Button(Rect(0,70,80,30),"Play Again"))
 		{
 			Application.LoadLevel("Together v4ever do not touch only copy");

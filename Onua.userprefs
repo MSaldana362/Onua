@@ -1,9 +1,12 @@
 ﻿<Properties>
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\playerControlsCopy.js">
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.Default" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\CamPan.js">
     <Files>
-      <File FileName="Assets\Scripts\playerControls.js" Line="136" Column="3" />
-      <File FileName="Assets\Scripts\playerControlsCopy.js" Line="126" Column="34" />
+      <File FileName="Assets\Scripts\PlayerDamage+Spawn.js" Line="18" Column="25" />
+      <File FileName="Assets\Scripts\playerControls.js" Line="33" Column="38" />
+      <File FileName="Assets\Scripts\playerControlsCopy.js" Line="15" Column="1" />
+      <File FileName="Assets\Scripts\PlayerDamage+Spawn - Copy.js" Line="8" Column="20" />
+      <File FileName="Assets\Scripts\CamPan.js" Line="11" Column="30" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

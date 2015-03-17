@@ -12,6 +12,7 @@ var soundRate : float = 0.0;
 var soundDelay : float = 0.0;
 var ispushed : boolean = false;
 var ispushed2 : boolean = false;
+var canMove : boolean = true;
 function PlaySound(soundName,soundDelay : float)
 {
 	if (!audio.isPlaying && Time.time > soundRate)
@@ -29,7 +30,7 @@ function Update()
 	var controller : CharacterController = 
 	GetComponent(CharacterController);
 	
-	if (controller.isGrounded)
+	if (controller.isGrounded && canMove)
 	{
 	
 		if (Input.GetKey("a") && !Input.GetKey("d"))
