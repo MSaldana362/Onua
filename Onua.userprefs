@@ -1,9 +1,11 @@
 ﻿<Properties>
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\playerControlsCopy.js">
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.Default" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\push.js">
     <Files>
+      <File FileName="Assets\Scripts\push.js" Line="19" Column="43" />
       <File FileName="Assets\Scripts\playerControls.js" Line="136" Column="3" />
-      <File FileName="Assets\Scripts\playerControlsCopy.js" Line="126" Column="34" />
+      <File FileName="Assets\Scripts\playerControlsCopy.js" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\push - Copy.js" Line="19" Column="87" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

@@ -16,7 +16,7 @@ function OnTriggerStay(other : Collider)
 		
 	}
 	else if (other.tag == "p1pushboxleft" && Input.GetKey("s") &&  
-	GameObject.FindGameObjectWithTag("player1").transform.GetComponent(playerControls).moveRight)
+	GameObject.FindGameObjectWithTag("player2").transform.GetComponent(playerControlsCopy).moveRight)
 	{
 		GameObject.FindGameObjectWithTag("player1").transform.GetComponent(playerControls).ispushed2 = true;
 		print ("hit");
