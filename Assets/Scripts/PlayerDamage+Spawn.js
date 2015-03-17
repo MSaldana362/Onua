@@ -60,13 +60,17 @@ function OnGUI()
 	if(gameOver)
 	{
 		GUI.BeginGroup(Rect(Screen.width/2-50,Screen.height/2-50,400,200));
-		GUI.Box(Rect(0,0,200,100),"Game Over");
+		GUI.Box(Rect(0,0,240,100),"Game Over");
 		GUI.Label(Rect(10,20,200,21),"Would you like to play again?");
 		if (GUI.Button(Rect(0,70,80,30),"Play Again"))
 		{
 			Application.LoadLevel("Together v4ever do not touch only copy");
 		}
-		if (GUI.Button(Rect(120,70,80,30),"Quit Game"))
+		if (GUI.Button(Rect(80,70,80,30),"Main Menu"))
+		{
+			Application.LoadLevel("Title");
+		}
+		if (GUI.Button(Rect(160,70,80,30),"Quit Game"))
 		{
 			Application.Quit();
 		}	

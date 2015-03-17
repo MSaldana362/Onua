@@ -51,8 +51,11 @@ function OnGUI ()
 		GUI.BeginGroup(Rect(Screen.width/2-100,Screen.height/2-100,400,400));
 		GUI.Box(Rect(0,0,200,200),"Rules Menu");
 		GUI.Label(Rect(0,20,200,21),"The goal of the game is to outlive");
-		GUI.Label(Rect(0,40,202,21),"the other player. Who ever reaches");
-		GUI.Label(Rect(0,60,200,21),"0 lives first, loses.");	
+		GUI.Label(Rect(0,40,202,21),"the other player. Who ever loses");
+		GUI.Label(Rect(0,60,200,21),"all there lives first, loses.");
+		GUI.Label(Rect(0,80,200,21),"The player must stay within the ");
+		GUI.Label(Rect(0,100,200,21),"boundaries or they will begin");
+		GUI.Label(Rect(0,120,200,21),"to lose hp or wrose.");	
 		GUI.EndGroup();
 	}
 	else if(isHelp && !isRules)
@@ -66,7 +69,7 @@ function OnGUI ()
 		GUI.Label(Rect(0,80,110,21),"Player 2 Controls : ");
 		GUI.Label(Rect(0,100,200,21),"   Movement : W, A, D Keys");
 		GUI.Label(Rect(0,120,200,21),"   Push : S Key");
-		GUI.Label(Rect(0,140,200,21),"   Escape = Menu Exit/Pause");
+		GUI.Label(Rect(0,140,200,21),"   Escape = Menu Exit");
 		GUI.EndGroup();
 	}
 }

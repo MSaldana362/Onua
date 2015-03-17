@@ -1,10 +1,10 @@
 ﻿<Properties>
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.Default" />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
   <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\MenuTest.js">
     <Files>
-      <File FileName="Assets\Scripts\MenuTest.js" Line="55" Column="56" />
-      <File FileName="Assets\Scripts\PlayerDamage+Spawn.js" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\PlayerDamage+Spawn - Copy.js" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\MenuTest.js" Line="72" Column="54" />
+      <File FileName="Assets\Scripts\PlayerDamage+Spawn.js" Line="76" Column="5" />
+      <File FileName="Assets\Scripts\PlayerDamage+Spawn - Copy.js" Line="75" Column="8" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
