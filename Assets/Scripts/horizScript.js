@@ -11,7 +11,7 @@ function Update()
 	controller.Move(velocity*Time.deltaTime);
 	*/
 	
-	transform.Translate(xdir, 0,0);
+	transform.Translate(xdir, 0,0,Space.World);
 }
 
 

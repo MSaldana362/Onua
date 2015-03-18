@@ -1,11 +1,12 @@
 ﻿<Properties>
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.Default" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\playerControlsCopy.js">
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\PlayerDamage+Spawn - Copy.js">
     <Files>
-      <File FileName="Assets\Scripts\PlayerDamage+Spawn - Copy.js" Line="45" Column="60" />
-      <File FileName="Assets\Scripts\PlayerDamage+Spawn.js" Line="45" Column="30" />
-      <File FileName="Assets\Scripts\playerControlsCopy.js" Line="147" Column="7" />
-      <File FileName="Assets\Scripts\playerControls.js" Line="147" Column="7" />
+      <File FileName="Assets\Scripts\horizScript.js" Line="14" Column="43" />
+      <File FileName="Assets\Scripts\PlayerDamage+Spawn.js" Line="32" Column="3" />
+      <File FileName="Assets\Scripts\PlayerDamage+Spawn - Copy.js" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\playerControlsCopy.js" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\playerControls.js" Line="1" Column="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
