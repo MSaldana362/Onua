@@ -87,7 +87,7 @@ function Update()
 			
 			
 		}		
-		else
+		else 
 		{
 			if (Input.GetKey("right") && !Input.GetKey("left"))
 			{
@@ -117,7 +117,7 @@ function Update()
 			
 			}	
 	}
-	else 
+	else  if(canMove)
 	{
 	
 	
@@ -144,7 +144,10 @@ function Update()
 		}
 	}
 	
-	
+	if (!canMove)
+	{
+	velocity = Vector3.zero;
+	}
 	if (velocity.x >1)
 	velocity.x  -= deceleration * Time.deltaTime;
 	else if (velocity.x <-1)

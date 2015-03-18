@@ -30,7 +30,7 @@ function Update()
 	var controller : CharacterController = 
 	GetComponent(CharacterController);
 	
-	if (controller.isGrounded && canMove)
+	if (controller.isGrounded)
 	{
 	
 		if (Input.GetKey("a") && !Input.GetKey("d"))
@@ -113,7 +113,7 @@ function Update()
 			aniPlay.aniSprite(16,16,5,13,4,12,!moveRight);	
 			}		 
 	}
-	else 
+	else
 	{
 		if (Input.GetKey("a") && velocity.x > airvelocity - 20 && velocity.x < airvelocity + 10)
 		{
@@ -144,7 +144,10 @@ function Update()
 	
 	
 	
-	
+	if (!canMove)
+	{
+	velocity = Vector3.zero;
+	}
 	if (velocity.x >1)
 	velocity.x  -= deceleration * Time.deltaTime;
 	else if (velocity.x <-1)

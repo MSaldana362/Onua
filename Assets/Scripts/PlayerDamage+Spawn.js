@@ -22,12 +22,14 @@ function Update () {
 		Hp = MaxHp;
 		Lives--;
 		transform.position = spawn.position;
+		GetComponent(playerControls).velocity = Vector3.zero;
 	}
 	if(Lives == 0)
 	{
 		gameOver = true;
 		GetComponent(playerControls).canMove = false;
 		GameObject.FindGameObjectWithTag("MainCamera").GetComponent(CamPan).canMove = false;
+		GameObject.FindGameObjectWithTag("player2").GetComponent(playerControlsCopy).canMove = false;
 	}
 }
 
@@ -41,6 +43,8 @@ function OnTriggerEnter(other : Collider)
 	{
 		Hp = MaxHp;
 		Lives--;
+		
+		GetComponent(playerControls).velocity = Vector3.zero;
 		transform.position = spawn.position;
 	}
 }
